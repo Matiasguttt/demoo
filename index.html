@@ -1,8 +1,146 @@
- <a-cylinder color="blue" height="4"
-                    top-radius="2" bottom-radius="2"
-                    animation="
+<!DOCTYPE html>
+<html>
+    <head>
+        	<script src="https://aframe.io/releases/1.8.0/aframe.min.js"></script> 
+    </head>
+    <body>
+        <a-scene>
+
+
+            <a-box
+                position="0 1 -5"
+                depth="2"
+                height="2"
+                width="2"
+                color="tomato"
+                animation="
+                    property: rotation;
+                    from: 0 0 0;
+                    to: 0 360 0;
+                    dur: 2000;
+                    easing: linear;
+                    loop: true;
+                "
+                animation__2="
+                    property: scale;
+                    from: 1 1 1;
+                    to: 1.5 1.5 1.5;
+                    dur: 1500;
+                    dir: alternate;
+                    loop: true;
+                ">
+            </a-box>
+
+           
+            <a-torus
+                color="blue"
+                arc="360"
+                radius="1.8"
+                radius-tubular="0.1"
+                position="0 1 -4"
+                animation="
+                    property: scale;
+                    from: 2 2 2;
+                    to: 1 1 1;
+                    dur: 3000;
+                    dir: alternate;
+                    loop: true;
+                "
+                animation__2="
+                    property: color;
+                    from: rgb(0, 0, 255);
+                    to: rgb(0, 255, 0);
+                    dur: 3000;
+                    dir: alternate;
+                    loop: true;
+                ">
+            </a-torus>
+
+            <!-- 3. SPHERE - position -->
+            <a-sphere
+                color="red"
+                radius="1"
+                position="3 1 -5"
+                animation="
                     property: position;
-                    from:-4 2 -22;
-                    to:4 2 -8
-                    "
-            ></a-cylinder>
+                    from: 3 1 -5;
+                    to: 4 2 -8;
+                    dur: 4000;
+                    dir: alternate;
+                    loop: true;
+                ">
+            </a-sphere>
+
+            <!-- 4. CONE - opacity -->
+            <a-cone
+                color="blue"
+                radius-bottom="2"
+                radius-top="0.5"
+                height="1"
+                position="0 5 -10"
+                animation="
+                    property: opacity;
+                    from: 0.5;
+                    to: 0;
+                    dur: 5000;
+                    dir: alternate;
+                    easing: linear;
+                    loop: true;
+                ">
+            </a-cone>
+
+          
+            <a-cylinder
+                color="yellow"
+                radius="1"
+                height="2"
+                position="-4 1 -6"
+                animation="
+                    property: visible;
+                    from: true;
+                    to: false;
+                    dur: 99999999;
+                    dir: alternate;
+                    loop: true;
+                ">
+            </a-cylinder>
+
+            <!-- 6. PLANE - color -->
+            <a-plane
+                color="blue"
+                width="3"
+                height="3"
+                position="4 1 -8"
+                rotation="0 45 0"
+                animation="
+                    property: color;
+                    from: rgb(0, 0, 255);
+                    to: rgb(0, 255, 0);
+                    dur: 2500;
+                    dir: alternate;
+                    loop: true;
+                ">
+            </a-plane>
+
+          
+            <a-ring
+                color="teal"
+                radius-inner="0.5"
+                radius-outer="1"
+                position="-3 2 -9"
+                animation="
+                    property: rotation;
+                    from: 0 0 0;
+                    to: 0 0 360;
+                    dur: 4000;
+                    easing: linear;
+                    loop: true;
+                ">
+            </a-ring>
+
+          
+
+        </a-scene>
+    </body>
+</html>
+
