@@ -4,11 +4,18 @@
         	<script src="https://aframe.io/releases/1.8.0/aframe.min.js"></script> 
     </head>
     <body>
+        <a-assets>
+      <audio id="soundEffect1" src="sound1.mp3" preload="auto"></audio>
+ </a-assets>
+
         <a-scene>
 
 
             <a-box
-                position="0 1 -5"
+                sound="src: #soundEffect1 on: click"
+
+                position="0 1 -5" 
+
                 depth="2"
                 height="2"
                 width="2"
